@@ -48,7 +48,7 @@ Implement the server logic to process asynchronous webhook notifications from Ta
 >
 > Failure to do so will cause Tamara to assume the notification failed and repeatedly retry sending it.
   * Refer to the [General Payment Integration Handbook](https://github.com/AhmedRaslan2022/payment-integration-handbook/tree/main) for best practices on handling webhooks.
-  * **API Doc:** [Direct Online Checkout](https://docs.tamara.co/docs/transaction-authorisation)
+  * **API Doc:** [Webhook Registration & Order Authorisation](https://docs.tamara.co/docs/transaction-authorisation)
   
 -----
 
