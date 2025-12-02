@@ -12,13 +12,13 @@ Start by carefully reading the official Tamara API documentation to understand a
   
 -----
 
-## 2\. 🔗 Register Your Webhook
+## 2\. 🛠 Implement "Create Checkout Session" Endpoint
 
-Register your webhook endpoint to receive payment updates from Tamara (e.g., payment status changes).
-  * **API Doc:** [Register Webhook URL](https://docs.tamara.co/reference/registerwebhookurl)
-  * If you are unfamiliar with webhooks, review the [General Payment Integration Handbook](https://github.com/AhmedRaslan2022/payment-integration-handbook/tree/main).
- * After a successful registration call, you must call the GET Retrieve all webhooks endpoint. Check the response list to confirm that your new webhook URL is present. This verifies that the registration was successful.
-> 💡 **Tip:** If the registration API request fails in Postman, try sending the request using cURL. Alternatively, register via the Tamara Partner Portal: [Webhook Registration & Order Authorisation](https://docs.tamara.co/docs/transaction-authorisation).
+Implement the "Create Checkout Session" API call. This is the core endpoint to initiate a payment **when the user selects Tamara**.
+  * **API Doc:** [https://docs.tamara.co/reference/createcheckoutsession](https://docs.tamara.co/reference/createcheckoutsession)
+  * **Ensure all required fields** are included in your request.
+> 🔎 **Debugging Tip:** Use a tool like JsonGrid to facilitate debugging and quickly find any missing fields or data formatting errors.
+
 
 -----
 
@@ -30,14 +30,18 @@ After the user attempts payment on Tamara's page, they will be redirected back t
   * **Cancel URL:** Handles user-canceled payments.
   * **API Doc:** [Direct Online Checkout](https://docs.tamara.co/docs/direct-online-checkout)
    
+
+
 -----
 
-## 4\. 🛠 Implement "Create Checkout Session" Endpoint
+## 4\. 🔗 Register Your Webhook
 
-Implement the "Create Checkout Session" API call. This is the core endpoint to initiate a payment **when the user selects Tamara**.
-  * **API Doc:** [https://docs.tamara.co/reference/createcheckoutsession](https://docs.tamara.co/reference/createcheckoutsession)
-  * **Ensure all required fields** are included in your request.
-> 🔎 **Debugging Tip:** Use a tool like JsonGrid to facilitate debugging and quickly find any missing fields or data formatting errors.
+Register your webhook endpoint to receive payment updates from Tamara (e.g., payment status changes).
+  * **API Doc:** [Register Webhook URL](https://docs.tamara.co/reference/registerwebhookurl)
+  * If you are unfamiliar with webhooks, review the [General Payment Integration Handbook](https://github.com/AhmedRaslan2022/payment-integration-handbook/tree/main).
+ * After a successful registration call, you must call the GET Retrieve all webhooks endpoint. Check the response list to confirm that your new webhook URL is present. This verifies that the registration was successful.
+> 💡 **Tip:** If the registration API request fails in Postman, try sending the request using cURL. Alternatively, register via the Tamara Partner Portal: [Webhook Registration & Order Authorisation](https://docs.tamara.co/docs/transaction-authorisation).
+
 
 -----
 
